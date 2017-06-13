@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DSSANavigator</string>
+    <string name="createQuery">CREATE TABLE cars (_id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, latitude REAL NOT NULL, longitude REAL NOT NULL);</string>
+    <string name="dropQouery">DROP TABLE IF EXISTS cars</string>
+    <string name="title_activity_map">Map</string>
+    <string name="Add">Добавить</string>
+    <string name="add">Добавить</string>
+    <string name="map">Карта</string>
+    <string name="title_activity_show_map">Map</string>
+</resources>
