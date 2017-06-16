@@ -15,15 +15,15 @@ import java.util.ArrayList;
 
 public class MainActivity extends Activity
 {
-    ListView carsList;
-    TextView header;
-    DBHelper dbhelper;
-    SQLiteDatabase db;
-    Cursor carCursor;
-    SimpleCursorAdapter carAdapter;
-    String carName;
-    long id;
-    public void deleteItem(long id)
+    private ListView carsList;
+    private TextView header;
+    private DBHelper dbhelper;
+    private SQLiteDatabase db;
+    private Cursor carCursor;
+    private SimpleCursorAdapter carAdapter;
+    private String carName;
+    private long id;
+    private void deleteItem(long id)
     {
         if(id==this.id)return;
         db=dbhelper.getWritableDatabase();

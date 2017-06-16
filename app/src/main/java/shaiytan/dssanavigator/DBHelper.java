@@ -11,7 +11,7 @@ import android.support.annotation.NonNull;
  * File class provides sqlite connection
  */
 
-public class DBHelper extends SQLiteOpenHelper
+class DBHelper extends SQLiteOpenHelper
 {
     private static final String DBNAME ="carstore.db";
     private final Resources res;

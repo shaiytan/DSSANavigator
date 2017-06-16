@@ -14,9 +14,8 @@ public class MapActivity extends FragmentActivity
         implements OnMapReadyCallback,
         GoogleMap.OnMapLongClickListener
 {
-    private GoogleMap mMap;
     private Marker marker;
-    EditText carname;
+    private EditText carname;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -42,7 +41,7 @@ public class MapActivity extends FragmentActivity
     @Override
     public void onMapReady(GoogleMap googleMap)
     {
-        mMap = googleMap;
+        GoogleMap mMap = googleMap;
         mMap.setOnMapLongClickListener(this);
         LocationManager loc= (LocationManager) getSystemService(LOCATION_SERVICE);
         try
@@ -50,7 +49,7 @@ public class MapActivity extends FragmentActivity
             loc.requestSingleUpdate(LocationManager.NETWORK_PROVIDER,createPendingResult(1,new Intent(),0));
             Location l=loc.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
             LatLng here = new LatLng(l.getLatitude(),l.getLongitude());
-            marker=mMap.addMarker(new MarkerOptions().position(here).title("You Are Here"));
+            marker= mMap.addMarker(new MarkerOptions().position(here).title("You Are Here"));
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(here,15));
         }
         catch (SecurityException e)

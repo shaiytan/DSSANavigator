@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by Shaiytan on 05.05.2017.
  */
 
-public class CarRecord implements Serializable
+class CarRecord implements Serializable
 {
 
     public String getCarName(){return carName;}
