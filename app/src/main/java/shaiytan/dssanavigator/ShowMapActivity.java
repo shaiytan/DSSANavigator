@@ -19,6 +19,8 @@ import java.util.*;
 
 import javax.xml.parsers.*;
 
+import shaiytan.dssanavigator.model.CarRecord;
+
 public class ShowMapActivity extends FragmentActivity implements OnMapReadyCallback
 {
 
@@ -38,7 +40,7 @@ public class ShowMapActivity extends FragmentActivity implements OnMapReadyCallb
         cars=(ArrayList<CarRecord>) getIntent().getSerializableExtra("carslist");
         if (cars == null)
         {
-            cars=new ArrayList<CarRecord>();
+            cars= new ArrayList<>();
         }
         id=getIntent().getLongExtra("myid",-1);
     }
@@ -83,7 +85,7 @@ public class ShowMapActivity extends FragmentActivity implements OnMapReadyCallb
             @Override
             protected ArrayList<String> doInBackground(CarRecord... params)
             {
-                ArrayList<String> routes=new ArrayList<String>();
+                ArrayList<String> routes= new ArrayList<>();
                 for (CarRecord x:params)
                 {
                     if(x.getId()==id) continue;
